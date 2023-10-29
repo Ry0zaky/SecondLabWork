@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>@ViewData["Title"]</title>
+
+</head>
+<body>
+    <div id="left-nav">
+        @await Component.InvokeAsync("LeftNavigation")
+    </div>
+
+    <div id="main-content">
+        <nav>
+            <ul>
+                <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                <li><a asp-controller="Employee" asp-action="Index">Employees</a></li>
+                <li><a asp-controller="Home" asp-action="Privacy">Privacy</a></li>
+            </ul>
+        </nav>
+
+        @RenderBody()
+    </div>
+</body>
+</html>

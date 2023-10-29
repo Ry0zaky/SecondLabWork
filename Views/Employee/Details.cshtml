@@ -1,0 +1,29 @@
+﻿@model Employee
+
+<h2>Employee Details</h2>
+<hr /> 
+
+<div class="row">
+    <div class="col-md-8">
+        <dl class="row">
+            <dt class="col-sm-3">Name:</dt>
+            <dd class="col-sm-9">@Model.Name</dd>
+
+            <dt class="col-sm-3">Surname:</dt>
+            <dd class="col-sm-9">@Model.Surname</dd>
+
+            <dt class="col-sm-3">Birthdate:</dt>
+            <dd class="col-sm-9">@Model.BirthDate.ToShortDateString()</dd>
+
+            <dt class="col-sm-3">Position:</dt>
+            <dd class="col-sm-9">@Model.Position</dd>
+        </dl>
+    </div>
+    <div class="col-md-4 text-center">
+        <img src="@Model.Image" alt="@Model.Name" style="max-width: 100%;" />
+    </div>
+</div>
+
+<div class="text-center mt-3">
+    <a asp-action="Index" class="btn btn-link text-blue text-underline">Back to List</a>
+</div>
